@@ -35,13 +35,16 @@ public class echoapp extends HttpServlet {
 
 			String headerName = headerNames.nextElement();
 			out.write("<b>" + headerName + ": </b>");
-			
+						
 			Enumeration<String> headers = req.getHeaders(headerName);
 			while (headers.hasMoreElements()) {
 				String headerValue = headers.nextElement();
 				out.write(headerValue);
-				out.write("<br/>");
+				
 			}
+			
+			out.write("<br/>");
+			out.write("<br/>");
 
 		}
 
